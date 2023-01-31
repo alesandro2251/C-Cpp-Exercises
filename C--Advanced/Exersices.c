@@ -45,10 +45,8 @@ int func1(int a[], int n) {
 
 float func(struct item *head) {
   int even_sum = 0, odd_sum = 0;
-  int count = 0;
   struct item *p = head;
   while (p != NULL) {
-    count++;
     if (p->key % 2 == 0) {
       even_sum += p->key;
     } else {
@@ -56,7 +54,7 @@ float func(struct item *head) {
     }
     p = p->next;
   }
-  return (float)even_sum / odd_sum;
+  return even_sum / odd_sum;
 }
 
 //create two codes that are universal for factorial numbers in c  one with iterative solutions  and one wth recursive
